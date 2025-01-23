@@ -1,0 +1,23 @@
+{
+  "name": "sba-318---express-server-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendsaw/SBA-318---Express-Server-Application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wendsaw/SBA-318---Express-Server-Application/issues"
+  },
+  "homepage": "https://github.com/wendsaw/SBA-318---Express-Server-Application#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
