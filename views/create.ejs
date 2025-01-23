@@ -66,25 +66,25 @@
           /* details styles */
       
           /* create styles */
-          .create-blog form{
+          .create-employee form{
             max-width: 400px;
             margin: 0 auto;
           }
-          .create-blog input,
-          .create-blog textarea{
+          .create-employee input,
+          .create-employee textarea{
             display: block;
             width: 100%;
             margin: 10px 0;
             padding: 8px;
           }
-          .create-blog label{
+          .create-employee label{
             display: block;
             margin-top: 24px;
           }
           textarea{
             height: 120px;
           }
-          .create-blog button{
+          .create-employee button{
             margin-top: 20px;
             background: crimson;
             color: white;
@@ -106,12 +106,21 @@
         </div>
         <ul>
           <li><a href="/">List of employees</a></li>
-          <li><a href="/create">New Employee</a></li>
+          <li><a href="/Emplyee/create">New Employee</a></li>
           <li><a href="/about">About</a></li>
         </ul>
       </nav>
-      
-      </div>
+      <div class="create-employee content">
+        <form action="">
+          <label for="lastName">Employee Last Name</label>
+          <input type="text" id='LastName' require>
+          <label for="firstName">Employee First name</label>
+          <input type="text" id='firstName' require>
+          <label for="title">Employee Title</label>
+          <input type="text"id='title' require>
+          <label for="note">Employee Detail</label>
+          <textarea name="note" id="note" require></textarea>
+        </form>
       
 </body>
 <footer>
