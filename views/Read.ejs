@@ -4,11 +4,11 @@
 <body>
     <%-include("./partials/nav.ejs")%>
       <div class="employee-content">
-        <h2>list of all Employees</h2>
-        <% if (employees.length>0){%>
-          <% employees.forEach(e =>{ %>
-            <h3 class="last"><%=e.lastName%></h3>
-            <p class="first"><%=e.firstName%></p>
+        <h2>List of all Presidents</h2>
+        <% if (presidents.length>0){%>
+          <% presidents.forEach(e =>{ %>
+            <h3 class="last"><%=e.lastName%> <%=e.firstName%></h3>
+            <!-- <p class="first"><%=e.firstName%></p> -->
             <h4 class="title"><%=e.title%></h4>
             <%})%>
        <% } else {%>
