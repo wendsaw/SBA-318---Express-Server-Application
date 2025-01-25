@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%-include("./partials/head.ejs")%>
+
 <body>
-    
+    <%-include("./partials/nav.ejs")%>
+    <h4 class="id">
+        <%=presi.id%>
+    </h4>
+    <h3 class="last">
+        <%=presi.lastName%> <%=presi.firstName%>
+    </h3>
+    <h4 class="title">
+        <%=presi.title%>
+    </h4>
+    <h4 class="title">
+        <%=presi.content%>
+    </h4>
+
+    <%-include("./partials/footer.ejs")%>
 </body>
+
 </html>

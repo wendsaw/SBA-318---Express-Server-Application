@@ -25,7 +25,7 @@ app.get('/', (req ,res) =>{
 app.get('/president', (req ,res) =>{
     
 
-    res.render('Read',{title:'All President', presidents});
+    res.render('read',{title:'All President', presidents});
 })
 
 app.post('/president',(req,res)=>{
@@ -70,7 +70,16 @@ app.get('/president/:id',(req,res)=>{
     const id=req.params.id
     console.log(id);
 
-    res.render('details')
+    const presi=presidents.find(c=> c.id===parseInt(req.params.id))
+
+    console.log(presi);
+    
+    // if (!course) res.status(404).send('course not found');
+    // res.send(course)
+    // course.name=req.body.name;
+    // res.send(course);
+
+    res.render('details',{ title:"president details",presi})
 })
 
 app.use((req,res)=>{
