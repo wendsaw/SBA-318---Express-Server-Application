@@ -76,6 +76,7 @@ app.get('/president/:id',(req,res)=>{
     res.render('details',{ title:"president details",presi})
 })
 
+
 app.use((req,res)=>{
     res.status(404).render('404',{title:"404"});
 })
