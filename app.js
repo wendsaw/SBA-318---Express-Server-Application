@@ -48,9 +48,6 @@ app.post('/president',(req,res)=>{
 })
 
 
-
-
-
 app.get('/president/create', (req ,res) =>{
 
     res.render('create',{title:"New President"});
@@ -74,10 +71,7 @@ app.get('/president/:id',(req,res)=>{
 
     console.log(presi);
     
-    // if (!course) res.status(404).send('course not found');
-    // res.send(course)
-    // course.name=req.body.name;
-    // res.send(course);
+    
 
     res.render('details',{ title:"president details",presi})
 })
@@ -85,4 +79,3 @@ app.get('/president/:id',(req,res)=>{
 app.use((req,res)=>{
     res.status(404).render('404',{title:"404"});
 })
-
