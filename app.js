@@ -13,24 +13,44 @@ app.set('view engine', 'ejs');
 //middleware
 app.use(express.static('public'));
 app.use(morgan('dev'))
+app.use(express.urlencoded({extended:true}));
 
-
-
-app.get('/create', (req ,res) =>{
-    res.render('create',{title:"New President"});
-})
-
-app.get('/', (req ,res) =>{
+app.get('/president', (req ,res) =>{
     
 
     res.render('Read',{title:'All President', presidents});
 })
 
-app.get('/update', (req ,res) =>{
+app.post('/president',(req,res)=>{
+
+    console.log(req.body.firstName);
+    
+    
+    const presi= {
+        id:presidents.length+1,
+        lastName:req.body.lastName,
+        firstName:req.body.firstName,
+        title:req.body.title,
+        content:req.body.note
+    };
+    presidents.push(presi);
+
+    console.log(presidents);
+    
+})
+
+app.get('/president/create', (req ,res) =>{
+    res.render('create',{title:"New President"});
+})
+
+
+
+
+app.get('/president/update', (req ,res) =>{
     res.render('Update',{title:"Update"});
 })
 
-app.get('/delete', (req ,res) =>{
+app.get('/president/delete', (req ,res) =>{
     res.render('Delete',{title:"Delete President"});
 })
 
