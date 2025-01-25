@@ -29,9 +29,10 @@
         const delet=document.querySelector('a.delete')
         console.log(delet);
         delet.addEventListener('click',(e)=>{
-            e.target
             event.preventDefault()
             console.log('hello');
+            const id = delet.getAttribute('data');
+            console.log(`id is ${id}`);
             
             
         })
