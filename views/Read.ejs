@@ -7,9 +7,11 @@
         <h2>List of all Presidents</h2>
         <% if (presidents.length>0){%>
           <% presidents.forEach(e =>{ %>
+            <a  class="single" href="/president/<%=e.id %>">
             <h3 class="last"><%=e.lastName%> <%=e.firstName%></h3>
             <!-- <p class="first"><%=e.firstName%></p> -->
             <h4 class="title"><%=e.title%></h4>
+          </a>
             <%})%>
        <% } else {%>
         <p>File empty</p>

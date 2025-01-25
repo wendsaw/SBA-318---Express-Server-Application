@@ -36,6 +36,8 @@ app.post('/president',(req,res)=>{
     presidents.push(presi);
 
     console.log(presidents);
+
+    res.redirect('/president')
     
 })
 
