@@ -33,8 +33,18 @@
             event.preventDefault()
             const id = delet.getAttribute('data');
             console.log(`id is ${id}`);
+            base=`/president/${id}`
+            fetch(base, {
+                method:'delete'
+            }).then((result)=>{
+                console.log('file delete');
+                
+            })
+                window.location.href='http://localhost:3000/delete/:id'
+
+           
             
-            window.location.href='http://localhost:3000/delete/:id'
+            
             
         })
 

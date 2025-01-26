@@ -52,7 +52,7 @@ app.get('/delete/:id', (req, res) => {
     console.log(presi);
 
 
-    res.render('delete', { title:"president details", presi })
+    res.render('delete', { title: "president details", presi })
 })
 
 app.post('/president', (req, res) => {
@@ -76,16 +76,14 @@ app.post('/president', (req, res) => {
 
 app.put('/update/:id', (req, res) => {
 
-    
+
 })
 
-app.delete('/delete/:id', (req, res) => {
+app.delete('/president/:id', (req, res) => {
 
-    const index=presidents.id;
-    presidents.splice(5,1);
-    res.send(presidents)
-
-
+   const newPesidents= presidents.splice(req.params.id, 1);
+    console.log("deleted president");
+    
     
 })
 
