@@ -27,6 +27,21 @@ app.get('/president', (req, res) => {
 
     res.render('read', { title: 'All President', presidents });
 })
+app.get('/president/create', (req, res) => {
+
+    res.render('create', { title: "New President" });
+})
+app.get('/president/:id', (req, res) => {
+    const id = req.params.id
+    console.log(id);
+
+    const presi = presidents.find(c => c.id === parseInt(req.params.id))
+
+    console.log(presi);
+
+
+    res.render('details', { title: "president details", presi })
+})
 
 app.post('/president', (req, res) => {
 
@@ -48,12 +63,6 @@ app.post('/president', (req, res) => {
 })
 
 
-app.get('/president/create', (req, res) => {
-
-    res.render('create', { title: "New President" });
-})
-
-
 app.put('/update/:id', (req, res) => {
     res.render('update', { title: "Update" });
 })
@@ -64,21 +73,6 @@ app.delete('/delete/:id', (req, res) => {
     res.render('update', { title: "Update" });
 
 })
-
-
-app.get('/president/:id', (req, res) => {
-    const id = req.params.id
-    console.log(id);
-
-    const presi = presidents.find(c => c.id === parseInt(req.params.id))
-
-    console.log(presi);
-
-
-    res.render('details', { title: "president details", presi })
-})
-
-
 
 
 app.use((req, res) => {
