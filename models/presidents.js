@@ -11,7 +11,8 @@
 
 const presidents = [
     {
-      id: 1,
+      id: 0,
+      rank:'1',
       lastName:"Washington",
       firstName:"George",
       title: "First President",
@@ -19,7 +20,8 @@ const presidents = [
         "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero",
     },
     {
-      id: 2,
+      id: 1,
+      rank:'2',
       lastName:"Adams", 
       firstName:"John", 
       title: "Second President",
@@ -27,7 +29,8 @@ const presidents = [
         "eum sed dolores ipsam sint possimus debitis occaecati\ndebitis qui qui et\nut placeat enim earum aut odit facilis\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur",
     },
     {
-      id: 3,
+      id: 2,
+      rank:'3',
       lastName:"Jefferson",
        firstName:"Thomas",
         title:"Third President",
@@ -35,7 +38,8 @@ const presidents = [
         "non et quaerat ex quae ad maiores\nmaiores recusandae totam aut blanditiis mollitia quas illo\nut voluptatibus voluptatem\nsimilique nostrum eum",
     },
     {
-      id: 4,
+      id: 3,
+      rank:'4',
       lastName:"Madison", 
       firstName:"James", 
       title:"Fourth President",
@@ -43,7 +47,8 @@ const presidents = [
         "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores",
     },
     {
-      id: 5,
+      id: 4,
+      rank:'5',
       lastName:"Trump", 
       firstName:"Donald", 
       title:"Current President",
