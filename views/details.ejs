@@ -18,28 +18,36 @@
     <h4 class="title">
         <%=presi.content%>
     </h4>
-    <a href="http://localhost:3000/president/create" class="edit" data ="<%=presi.id%>">update</a>
-    <a href="http://localhost:3000/" class="delete" data ="<%=presi.id%>">delete</a>
+    <a href="" class="edit" data ="<%=presi.id%>">update</a>
+    <a href="" class="delete" data ="<%=presi.id%>">delete</a>
     
 
     <%-include("./partials/footer.ejs")%>
 
-    <!-- <script>
+    <script>
         
-        const delet=document.querySelector('a.delete')
+        const delet=document.querySelector('a.delete');
+        const update=document.querySelector('a.edit');
         console.log(delet);
         delet.addEventListener('click',(e)=>{
             event.preventDefault()
             const id = delet.getAttribute('data');
             console.log(`id is ${id}`);
+            window.location.href='http://localhost:3000/delete/:id'
             
+        })
+
+        update.addEventListener('click',(e)=>{
+            event.preventDefault()
+            
+            window.location.href='http://localhost:3000/president/create'
             
         })
         
-    </script> -->
+    </script>
 
-    <%=presi.id%>
-    <a href="http://localhost:3000/">yahoo</a>
+    
+
 
 </body>
 

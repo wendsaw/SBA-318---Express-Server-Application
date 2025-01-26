@@ -43,6 +43,18 @@ app.get('/president/:id', (req, res) => {
     res.render('details', { title: "president details", presi })
 })
 
+app.get('/delete/:id', (req, res) => {
+    const id = req.params.id
+    console.log(id);
+
+    const presi = presidents.find(c => c.id === parseInt(req.params.id))
+
+    console.log(presi);
+
+
+    res.render('delete', { title:"president details", presi })
+})
+
 app.post('/president', (req, res) => {
 
     console.log(req.body.firstName);
@@ -62,18 +74,20 @@ app.post('/president', (req, res) => {
 
 })
 
-
 app.put('/update/:id', (req, res) => {
-    res.render('update', { title: "Update" });
+
+    
 })
 
 app.delete('/delete/:id', (req, res) => {
 
+    const index=presidents.id;
+    presidents.splice(5,1);
+    res.send(presidents)
 
-    res.render('update', { title: "Update" });
 
+    
 })
-
 
 app.use((req, res) => {
     res.status(404).render('404', { title: "404" });
