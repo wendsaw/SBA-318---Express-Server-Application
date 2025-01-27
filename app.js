@@ -3,7 +3,8 @@ const express = require('express');
 const { title } = require('process');
 const morgan = require('morgan')
 const app = express();
-const presidents = require('./models/presidents');
+
+const presiRoutes=require("./routes/presiRoutes")
 
 app.listen(3000);
 
@@ -15,84 +16,15 @@ app.use(express.static('public'));
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }));
 
+
+
 app.get('/', (req, res) => {
 
 
     res.render('home', { title: 'COMPLETE LIST OF ALL US PRESIDENT' });
 })
 
-
-app.get('/president', (req, res) => {
-
-
-    res.render('read', { title: 'All President', presidents });
-})
-app.get('/president/create', (req, res) => {
-
-    res.render('create', { title: "New President" });
-})
-app.get('/president/:id', (req, res) => {
-    const id = req.params.id
-    console.log(id);
-
-    const presi = presidents.find(c => c.id === parseInt(req.params.id))
-
-    console.log(presi);
-
-
-    res.render('details', { title: "president details", presi })
-})
-
-app.get('/delete/:id', (req, res) => {
-    const id = req.params.id
-    console.log(id);
-
-    const presi = presidents.find(c => c.id === parseInt(req.params.id))
-
-    console.log(presi);
-
-
-    res.render('delete', { title: "president details", presi })
-})
-
-app.post('/president', (req, res) => {
-
-    console.log(req.body.firstName);
-
-    const presi = {
-        id: presidents.length + 1,
-        lastName: req.body.lastName,
-        firstName: req.body.firstName,
-        title: req.body.title,
-        content: req.body.note
-    };
-    presidents.push(presi);
-
-    console.log(presidents);
-
-    res.redirect('/president')
-
-})
-
-app.put('/update/:id', (req, res) => {
-    presidents.id
-      presidents.rank
-      presidents.lastName 
-      presidents.firstName 
-      presidents.title
-      presidents.content
-    // presidents.name=req.body.name;
-    //  console.log(req.body);
-
-})
-
-app.delete('/president/:id', (req, res) => {
-
-   const newPesidents= presidents.splice(req.params.id, 1);
-    console.log("deleted president");
-    
-    
-})
+app.use(presiRoutes);
 
 app.use((req, res) => {
     res.status(404).render('404', { title: "404" });
