@@ -75,7 +75,14 @@ app.post('/president', (req, res) => {
 })
 
 app.put('/update/:id', (req, res) => {
-
+    presidents.id
+      presidents.rank
+      presidents.lastName 
+      presidents.firstName 
+      presidents.title
+      presidents.content
+    // presidents.name=req.body.name;
+    //  console.log(req.body);
 
 })
 

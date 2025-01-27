@@ -20,8 +20,6 @@
     </h4>
     <a href="" class="edit" data ="<%=presi.id%>">update</a>
     <a href="" class="delete" data ="<%=presi.id%>">delete</a>
-    
-
     <%-include("./partials/footer.ejs")%>
 
     <script>
@@ -40,18 +38,25 @@
                 console.log('file delete');
                 
             })
-                window.location.href='http://localhost:3000/delete/:id'
-
-           
-            
-            
+                window.location.href='http://localhost:3000/'
             
         })
 
         update.addEventListener('click',(e)=>{
             event.preventDefault()
-            
+            const id = update.getAttribute('data');
+            console.log(`id is ${id}`);
+            base=`/president/${id}`
+            fetch(base, {
+                method:'put'
+            }).then((result)=>{
+                console.log('file edit');
+                
+            })
+
+
             window.location.href='http://localhost:3000/president/create'
+            
             
         })
         
