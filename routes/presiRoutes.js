@@ -1,6 +1,7 @@
 const express= require("express")
 const router=express.Router();
 const presidents = require('../models/presidents');
+const presiFile=require("../models/presidentfile");
 
 
 router.get('/', (req, res) => {
@@ -49,7 +50,9 @@ router.put('/:id', (req, res) => {
     presidents.title
     presidents.content
 
-})
+    res.send('update')
+
+}) 
 
 router.delete('/:id', (req, res) => {
 

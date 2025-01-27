@@ -3,6 +3,7 @@ const express = require('express');
 const { title } = require('process');
 const morgan = require('morgan')
 const app = express();
+app.use(express.json());
 
 const presiRoutes=require("./routes/presiRoutes")
 
