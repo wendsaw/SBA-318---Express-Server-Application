@@ -3,16 +3,15 @@ const router=express.Router();
 const presidents = require('../models/presidents');
 
 
-router.get('/president', (req, res) => {
-
+router.get('/', (req, res) => {
 
     res.render('read', { title: 'All President', presidents });
 })
-router.get('/president/create', (req, res) => {
+router.get('/create', (req, res) => {
 
     res.render('create', { title: "New President" });
 })
-router.get('/president/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     const id = req.params.id
     console.log(id);
 
@@ -23,7 +22,7 @@ router.get('/president/:id', (req, res) => {
     res.render('details', { title: "president details", presi })
 })
 
-router.post('/president', (req, res) => {
+router.post('/', (req, res) => {
 
     console.log(req.body.firstName);
 
@@ -42,19 +41,17 @@ router.post('/president', (req, res) => {
 
 })
 
-router.put('/president/:id', (req, res) => {
+router.put('/:id', (req, res) => {
     presidents.id
     presidents.rank
     presidents.lastName
     presidents.firstName
     presidents.title
     presidents.content
-    // presidents.name=req.body.name;
-    //  console.log(req.body);
 
 })
 
-router.delete('/president/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
 
     const newPesidents = presidents.splice(req.params.id, 1);
     console.log("deleted president");

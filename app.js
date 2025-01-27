@@ -16,15 +16,13 @@ app.use(express.static('public'));
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }));
 
-
-
 app.get('/', (req, res) => {
 
 
     res.render('home', { title: 'COMPLETE LIST OF ALL US PRESIDENT' });
 })
 
-app.use(presiRoutes);
+app.use("/president",presiRoutes);
 
 app.use((req, res) => {
     res.status(404).render('404', { title: "404" });
