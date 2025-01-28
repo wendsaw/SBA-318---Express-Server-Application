@@ -34,9 +34,9 @@ const presidents = [
     },
     {
         id: 4,
-        dateBirth:"05/26/1892",
-        placeBirth: "Californi",
-        levelEducation: "High School",
+        dateBirth:"05/26/1945",
+        placeBirth: "New York",
+        levelEducation: "kindergarten",
         mariatalStatus: "Married",
         numberKids: "10"
     },
