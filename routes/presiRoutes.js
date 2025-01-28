@@ -8,20 +8,27 @@ router.get('/', (req, res) => {
 
     res.render('read', { title: 'All President', presidents });
 })
+
 router.get('/create', (req, res) => {
 
-    res.render('create', { title: "New President" });
+    res.render('create', { title: "New President",presidents });
 })
+
+
 router.get('/:id', (req, res) => {
     const id = req.params.id
     console.log(id);
 
     const presi = presidents.find(c => c.id === parseInt(req.params.id))
+    const presiLife = presiFile.find(c => c.id === parseInt(req.params.id))
 
     console.log(presi);
 
-    res.render('details', { title: "president details", presi })
+    res.render('details', { title: "president details", presi,presiLife })
 })
+
+
+
 
 router.post('/', (req, res) => {
 

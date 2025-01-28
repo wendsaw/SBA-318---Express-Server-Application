@@ -1,48 +1,48 @@
 const presidents = [
     {
-      id: 0,
-      DateBirth:'1',
-      PlaceBirth:"Washington",
-      levelEducation:"George",
-      mariatalStatus: "First President",
-      numberKids:"1"
+        id: 0,
+        dateBirth:"05/26/1892",
+        placeBirth: "Washington",
+        levelEducation: "High School",
+        mariatalStatus: "Married",
+        numberKids: "23"
     },
 
     {
         id: 1,
-        DateBirth:'1',
-        PlaceBirth:"Washington",
-        levelEducation:"George",
-        mariatalStatus: "First President",
-        numberKids:"1"
-      },
-      {
+        dateBirth:"05/26/1892",
+        placeBirth: "Texas",
+        levelEducation: "High School",
+        mariatalStatus: "Married",
+        numberKids: "30"
+    },
+    {
         id: 2,
-        DateBirth:'1',
-        PlaceBirth:"Washington",
-        levelEducation:"George",
-        mariatalStatus: "First President",
-        numberKids:"1"
-      },
-      {
+        dateBirth:"05/26/1892",
+        placeBirth: "New York",
+        levelEducation: "High School",
+        mariatalStatus: "Married",
+        numberKids: "1"
+    },
+    {
         id: 3,
-        DateBirth:'1',
-        PlaceBirth:"Washington",
-        levelEducation:"George",
-        mariatalStatus: "First President",
-        numberKids:"1"
-      },
-      {
+        dateBirth:"05/26/1892",
+        placeBirth: "Colorado",
+        levelEducation: "High School",
+        mariatalStatus: "Married",
+        numberKids: "3"
+    },
+    {
         id: 4,
-        DateBirth:'1',
-        PlaceBirth:"Washington",
-        levelEducation:"George",
-        mariatalStatus: "First President",
-        numberKids:"1"
-      },
-    
-  ];
-  
+        dateBirth:"05/26/1892",
+        placeBirth: "Californi",
+        levelEducation: "High School",
+        mariatalStatus: "Married",
+        numberKids: "10"
+    },
+
+];
 
 
-module.exports=presidents;
+
+module.exports = presidents;
