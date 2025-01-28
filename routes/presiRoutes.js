@@ -50,14 +50,13 @@ router.post('/', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-    presidents.id
-    presidents.rank
-    presidents.lastName
-    presidents.firstName
-    presidents.title
-    presidents.content
 
-    res.send('update')
+    const presiDetail=presidents.find(c=> c.id===parseInt(req.params.id))
+    if (!presiDetail) res.status(404).send('course not found');
+    
+    presidents.content=req.body.content
+
+    res.send(`${presiDetail} update` )
 
 }) 
 
