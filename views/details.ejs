@@ -4,8 +4,6 @@
 
 <body>
     <%-include("./partials/nav.ejs")%>
-  
-        
     <h4 class="id">
         <%=presi.rank%>
         
@@ -55,6 +53,8 @@
             }).then((result)=>{
                 console.log('file delete');
                 
+            }).catch(Error=>{
+                console.log(Error);
             })
                 window.location.href='http://localhost:3000'
             
@@ -63,27 +63,12 @@
         update.addEventListener('click',(e)=>{
             event.preventDefault()
             const id = update.getAttribute('data');
-            console.log(`id is ${id}`);
-            base=`/president/${id}`
-            fetch(base, {
-                method:'put'
-            }).then((result)=>{
-                console.log(result);
-                
-                
-            })
-
 
             window.location.href='http://localhost:3000////'
-            
             
         })
         
     </script>
-
-    
-
-
 </body>
 
 </html>

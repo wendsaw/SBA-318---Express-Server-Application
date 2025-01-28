@@ -3,7 +3,6 @@ const router=express.Router();
 const presidents = require('../models/presidents');
 const presiFile=require("../models/presidentfile");
 
-
 router.get('/', (req, res) => {
 
     res.render('read', { title: 'All President', presidents });
@@ -13,7 +12,6 @@ router.get('/create', (req, res) => {
 
     res.render('create', { title: "New President",presidents });
 })
-
 
 router.get('/:id', (req, res) => {
     const id = req.params.id
@@ -26,8 +24,6 @@ router.get('/:id', (req, res) => {
 
     res.render('details', { title: "president details", presi,presiLife })
 })
-
-
 
 
 router.post('/', (req, res) => {

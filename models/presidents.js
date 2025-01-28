@@ -1,13 +1,4 @@
 
-// const presidents=[
-//     {id:1,lastName:"Washington", firstName:"George", title:"First President"},
-//     {id:2,lastName:"Adams", firstName:"John", title:"Second President"},
-//     {lid:3,lastName:"Jefferson", firstName:"Thomas", title:"Third President"},
-//     {id:4,lastName:"Madison", firstName:"James", title:"Fourth President"},
-//     {id:5,lastName:"Trump", firstName:"Donald", title:"Current President"}
-
-    
-// ]
 
 const presidents = [
     {
@@ -19,7 +10,7 @@ const presidents = [
       content:
         "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero",
     },
-    
+
     {
       id: 1,
       rank:'2',
